@@ -13,7 +13,7 @@ Para ajuda ao iniciar projetos em Flutter, visite a
 > Para executar este projeto, verifique os requisitos de instalação do Flutter na documentação online.
 
 - Faça o clone  desse projeto em algum diretório no seu computador
-- Abra um terminal neste diretório e execute o comando `
+- Abra um terminal neste diretório e execute o comando
 ```
 flutter emulators --launch <id_do_emulador>
 ``` 

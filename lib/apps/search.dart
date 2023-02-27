@@ -12,11 +12,9 @@ class Search extends StatelessWidget {
         body: Container(
           color: Theme.of(context).colorScheme.secondary,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(color: Colors.green, spreadRadius: 3),
-            ],
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(10.0),
+                bottomRight: Radius.circular(10.0)),
           ),
           child: Container(
             margin: EdgeInsetsDirectional.symmetric(horizontal: 16),

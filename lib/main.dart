@@ -20,6 +20,16 @@ class MyApp extends StatelessWidget {
             primary: const Color(0xff006600),
             secondary: const Color(0xff919106),
           ),
+          inputDecorationTheme: InputDecorationTheme(
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(32))),
+              fillColor: MaterialStateColor.resolveWith(
+                  (states) => Color.fromARGB(255, 230, 230, 230)),
+              filled: true,
+              hintStyle: TextStyle(color: Color.fromARGB(255, 163, 163, 163))),
+          radioTheme: RadioThemeData(
+              fillColor: MaterialStateColor.resolveWith(
+                  (states) => const Color(0xff006600))),
           textTheme:
               const TextTheme(bodyMedium: TextStyle(color: Colors.white)),
         ),

@@ -7,30 +7,37 @@ class Index extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/Vectorlogo.png'),
-            Container(
-              margin: EdgeInsets.only(top: 400),
-              height: 65,
-              width: 245,
-              child: ElevatedButton(
-                  onPressed: () => {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Search()),
-                        )
-                      },
-                  child: const Text('Pesquisar CEPs')),
-            ),
-          ],
-        )
-      ],
+        body: Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              fit: BoxFit.none,
+              alignment: Alignment.bottomLeft,
+              image: new AssetImage('assets/Vectorback.png'))),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset('assets/Vectorlogo.png'),
+              Container(
+                margin: const EdgeInsets.only(top: 400),
+                height: 65,
+                width: 245,
+                child: ElevatedButton(
+                    onPressed: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Search()),
+                          )
+                        },
+                    child: const Text('Pesquisar CEPs')),
+              ),
+            ],
+          )
+        ],
+      ),
     ));
   }
 }

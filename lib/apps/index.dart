@@ -19,7 +19,10 @@ class Index extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset('assets/Vectorlogo.png'),
+              Container(
+                  height: 100,
+                  child:
+                      Image.asset('assets/Vectorlogo.png', fit: BoxFit.fill)),
               Container(
                 margin: const EdgeInsets.only(top: 400),
                 height: 65,

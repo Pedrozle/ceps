@@ -154,7 +154,7 @@ class _Result extends State<Result> {
                 Text('Formato:'),
                 SizedBox(height: 15),
                 Text(
-                    '{ "cep": "76801-799",   "logradouro": "Avenida dos Imigrantes",   "complemento": "até 465 - lado ímpar",   "bairro": "São Sebastião",   "localidade": "Porto Velho",   "uf": "RO",   "ibge": "1100205",   "gia": "",   "ddd": "69",   "siafi": "0003"}')
+                    '{ "cep": "76801-799",  "logradouro": "Avenida dos Imigrantes",  "complemento": "até 465 - lado ímpar",  "bairro": "São Sebastião",  "localidade": "Porto Velho",  "uf": "RO",  "ibge": "1100205",  "gia": "",  "ddd": "69",  "siafi": "0003"}')
               ],
             ),
           ),

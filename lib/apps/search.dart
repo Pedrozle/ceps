@@ -1,5 +1,6 @@
 import 'package:ceps/apps/result.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 enum DataFormat { json, jsonp, xml }
 
@@ -15,6 +16,9 @@ class _Search extends State<Search> {
 
   @override
   Widget build(BuildContext context) {
+    late Future<String> futureCep;
+    TextEditingController cepInput = TextEditingController();
+
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -44,7 +48,8 @@ class _Search extends State<Search> {
                       child: Container(
                         margin: const EdgeInsets.only(right: 24),
                         height: 56,
-                        child: const TextField(
+                        child: TextField(
+                          controller: cepInput,
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                               labelText: 'CEP', hintText: '00.000-000'),
@@ -55,6 +60,7 @@ class _Search extends State<Search> {
                       height: 56,
                       child: ElevatedButton(
                           onPressed: () => {
+                                // futureCep = fetchCEP(),
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -136,4 +142,13 @@ class _Search extends State<Search> {
       ]),
     ));
   }
+
+  // Future<http.Response> fetchCEP(String cep) async{
+  //   String cep =
+  //   String url = "https://viacep.com.br/ws/$/json/";
+
+  //   final response = await http.get(Uri.parse(url));
+
+  //   return response;
+  // }
 }
